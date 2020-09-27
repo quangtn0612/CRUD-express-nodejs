@@ -1,0 +1,20 @@
+html
+   head
+      link(rel="stylesheet",href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+   nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+      a.navbar-brand(href='/') Quang Website
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+         span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+         ul.navbar-nav.mr-auto
+            li.nav-item.active
+            a.nav-link(href='/users')
+               | Home 
+               span.sr-only (current)
+            li.nav-item
+            a.nav-link(href='/users/create') Create users
+   block content
+
+   footer.footer.bg-light
+      p.text-center.p-3 Album example is © Bootstrap, but please download and customize it for 
+         a(href="#") yourself!

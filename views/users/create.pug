@@ -1,0 +1,20 @@
+extends ../layout/common
+
+block content
+   .container
+      if error
+         each item in error
+            .alert.alert-warning
+               span= item
+
+      h1 Create new user
+
+      form(action="/users/create",method="post")
+         .form-group
+            label(for="name") Name:
+            input.mr-3.form-control(type="text",id="name",name="name",placeholder='Your name is...', value= values?values.name:values='')
+         .form-group
+            label(for="phone") Phone:
+            input.mr-3.form-control(type="text",id="phone",name="phone",placeholder='Your phone number is...',value= values?values.phone:values='')
+         .form-group
+            button.btn.btn-primary Create

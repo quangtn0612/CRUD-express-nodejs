@@ -1,0 +1,14 @@
+extends ../layout/common
+
+block content
+   .container
+      h1 Users details
+      
+      p 
+         b Name:  
+         span= user.name
+      p 
+         b Phone number:  
+         span= user.phone
+      a.btn.btn-warning(href="/users") come back!
+         
